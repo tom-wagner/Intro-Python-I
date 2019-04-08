@@ -35,10 +35,22 @@ waypoints = [
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
+def lat_long(lat, lon, name):
+    return { "lat": lat, "lon": lon, "name": name }
+
+waypoints.append(lat_long(12, 123, "North Pole"))
+
 
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
 # YOUR CODE HERE
+waypoints[0]['lon'] = -130
+waypoints[0]['name'] = "not a real place"
+
+print(waypoints)
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for waypoint in waypoints:
+    for k, v in waypoint.items():
+        print(k, v)
