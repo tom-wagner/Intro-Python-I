@@ -16,3 +16,8 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+with open('foo.txt') as f:
+  read_data = f.read()
+f.closed
+
+print(read_data)
