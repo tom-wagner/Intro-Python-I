@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+tc = calendar.TextCalendar(firstweekday=6)
+
+arg_count = len(sys.argv)
+current_month = datetime.today().month
+
+if arg_count == 1:
+  print(tc.formatmonth(2019, current_month))
+elif arg_count == 2:
+  _, month = sys.argv
+  print(tc.formatmonth(2019, int(month)))
+else:
+  _, month, year = sys.argv
+  print(month, year)
+  print(tc.formatmonth(int(year), int(month)))
